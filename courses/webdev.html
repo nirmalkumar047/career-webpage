@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Development Bootcamp</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    nav {
+      background: #1e1e1e;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px;
+      gap: 40px;
+    }
+    .main-content {
+      flex: 2;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .main-content img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .main-content h2 {
+      margin-top: 20px;
+      font-size: 2rem;
+      color: #333;
+    }
+    .main-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    .key-points ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    .sidebar {
+      flex: 1;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .sidebar h3 {
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    /* Accordion */
+    .accordion {
+      margin: 10px 0;
+    }
+    .accordion input[type="checkbox"] {
+      display: none;
+    }
+    .accordion label {
+      display: block;
+      background: #eee;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .accordion .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: #f9f9f9;
+      padding: 0 10px;
+    }
+    .accordion input:checked + label + .content {
+      max-height: 300px;
+      padding: 10px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .container {
+      flex-direction: column;
+      gap: 20px;
+      }
+      .main-content, .sidebar {
+      flex: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+      font-size: 1rem;
+      padding: 10px 20px;
+      }
+      nav h1 {
+      font-size: 1.5rem;
+      }
+      .main-content h2 {
+      font-size: 1.5rem;
+      }
+      .main-content p {
+      font-size: 0.9rem;
+      }
+      .sidebar h3 {
+      font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+      text-align: center;
+      }
+      nav div {
+      flex-direction: column;
+      gap: 10px;
+      }
+      .main-content img {
+      max-height: 200px;
+      }
+      .accordion label {
+      font-size: 0.9rem;
+      }
+      .accordion .content {
+      font-size: 0.8rem;
+      }}
+  </style>
+</head>
+<body>
+
+  <nav>
+   
+    <h1> Web Development Bootcamp</h1>
+
+    <div style="display: flex; gap: 15px;">
+      <a href="" style="padding: 10px 20px; background-color: #612EED; color: #fff; text-decoration: none; border-radius: 5px; font-size: 1rem; border: 2px solid #612EED; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#fff'; this.style.color='#612EED';" onmouseout="this.style.backgroundColor='#612EED'; this.style.color='#fff';">Enroll Now</a>
+      <a href="" style="padding: 10px 20px; background-color: #fff; color: #612EED; text-decoration: none; border-radius: 5px; font-size: 1rem; border: 2px solid #612EED; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#612EED'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#612EED';">Explore Courses</a>
+  </div>
+  </nav>
+
+  <div class="container">
+    <!-- Main Course Details -->
+    <div class="main-content">
+      <img src="/images/webdev.png" alt="Web Development">
+      <h2>Web Development Bootcamp</h2>
+      <p><strong>Languages:</strong> HTML, CSS, JavaScript, React.js</p>
+      <p><strong>Duration:</strong> 12 Weeks</p>
+      <p><strong>Course Starts From:</strong> June 15, 2025</p>
+
+      <h3>Description:</h3>
+      <p>
+        This bootcamp will take you from beginner to professional web developer. You'll learn how to build modern, responsive websites and dynamic web apps using the latest tools and technologies.
+      </p>
+
+      <div class="key-points">
+        <h3>Key Highlights:</h3>
+        <ul>
+          <li>Learn HTML5 & CSS3 with real-world layouts</li>
+          <li>Master JavaScript fundamentals and DOM manipulation</li>
+          <li>Build responsive designs with Flexbox & Grid</li>
+          <li>Hands-on projects for every major topic</li>
+          <li>Create a complete ReactJS web app</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Sidebar: Course Overview Accordion -->
+    <div class="sidebar">
+      <h3>Course Overview</h3>
+
+      <div class="accordion">
+        <input type="checkbox" id="html">
+        <label for="html">HTML</label>
+        <div class="content">
+          <p>Learn to structure webpages with HTML5 including tags, elements, forms, and semantic layout.</p>
+        </div>
+
+        <input type="checkbox" id="css">
+        <label for="css">CSS</label>
+        <div class="content">
+          <p>Style webpages using CSS3. Cover Flexbox, Grid, media queries, animations, and more.</p>
+        </div>
+
+        <input type="checkbox" id="js">
+        <label for="js">JavaScript</label>
+        <div class="content">
+          <p>Dive into variables, functions, loops, events, and DOM manipulation to make sites interactive.</p>
+        </div>
+
+        <input type="checkbox" id="react">
+        <label for="react">ReactJS</label>
+        <div class="content">
+          <p>Build dynamic user interfaces with ReactJS — components, props, state, hooks, and routing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

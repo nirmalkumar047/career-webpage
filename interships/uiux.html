@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>UI/UX Design Internship</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    nav {
+      background: #1e1e1e;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px;
+      gap: 40px;
+    }
+    .main-content {
+      flex: 2;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .main-content img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .main-content h2 {
+      margin-top: 20px;
+      font-size: 2rem;
+      color: #333;
+    }
+    .main-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    .key-points ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    .sidebar {
+      flex: 1;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .sidebar h3 {
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .accordion input[type="checkbox"] {
+      display: none;
+    }
+    .accordion label {
+      display: block;
+      background: #eee;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .accordion .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: #f9f9f9;
+      padding: 0 10px;
+    }
+    .accordion input:checked + label + .content {
+      max-height: 300px;
+      padding: 10px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .container {
+      flex-direction: column;
+      gap: 20px;
+      }
+      .main-content, .sidebar {
+      flex: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+      font-size: 1rem;
+      padding: 10px 20px;
+      }
+      .main-content h2 {
+      font-size: 1.5rem;
+      }
+      .main-content p, .sidebar h3 {
+      font-size: 0.9rem;
+      }
+      .accordion label {
+      font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+      text-align: center;
+      }
+      .container {
+      padding: 15px;
+      }
+      .main-content img {
+      max-height: 200px;
+      }
+      .main-content h2 {
+      font-size: 1.2rem;
+      }
+      .main-content p, .sidebar h3 {
+      font-size: 0.8rem;
+      }
+      .accordion label {
+      font-size: 0.8rem;
+      padding: 8px;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+  <nav>
+    
+    <h1>UI/UX Design Internship</h1>
+    <div style="display: flex; gap: 15px;">
+      <a href="" style="padding: 10px 20px; background-color: #612EED; color: #fff; text-decoration: none; border-radius: 5px; font-size: 1rem; border: 2px solid #612EED; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#fff'; this.style.color='#612EED';" onmouseout="this.style.backgroundColor='#612EED'; this.style.color='#fff';">Enroll Now</a>
+      <a href="" style="padding: 10px 20px; background-color: #fff; color: #612EED; text-decoration: none; border-radius: 5px; font-size: 1rem; border: 2px solid #612EED; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#612EED'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#612EED';">Explore Courses</a>
+  </div>
+  </nav>
+
+  <div class="container">
+    <!-- Internship Details -->
+    <div class="main-content">
+      <img src="/images/imgqs.png" alt="UI/UX Internship">
+      <h2>UI/UX Design Internship</h2>
+      <p><strong>Stipend:</strong> ₹8,000/month</p>
+      <p><strong>Duration:</strong> 2 Months</p>
+      <p><strong>Start Date:</strong> July 15, 2025</p>
+      <p><strong>Location:</strong> Remote</p>
+      <p><strong>Application Deadline:</strong> July 5, 2025</p>
+
+      <h3>Description:</h3>
+      <p>
+        Join our UI/UX Design internship to gain hands-on experience in building delightful user interfaces and experiences. Work on real-world projects under the guidance of industry experts.
+      </p>
+
+      <div class="key-points">
+        <h3>Key Responsibilities:</h3>
+        <ul>
+          <li>Design user interfaces for web and mobile platforms</li>
+          <li>Create wireframes and prototypes using Figma</li>
+          <li>Conduct usability testing and gather feedback</li>
+          <li>Collaborate with developers and product teams</li>
+        </ul>
+
+        <h3>Perks:</h3>
+        <ul>
+          <li>Certificate of Completion</li>
+          <li>Letter of Recommendation (Performance Based)</li>
+          <li>Flexible Work Hours</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Sidebar: Internship Overview -->
+    <div class="sidebar">
+      <h3>Internship Skills</h3>
+      <div class="accordion">
+        <input type="checkbox" id="figma">
+        <label for="figma">Figma</label>
+        <div class="content">
+          <p>Design wireframes, prototypes, and interfaces collaboratively using Figma.</p>
+        </div>
+
+        <input type="checkbox" id="ux">
+        <label for="ux">User Experience</label>
+        <div class="content">
+          <p>Understand user behavior and create smooth user journeys.</p>
+        </div>
+
+        <input type="checkbox" id="testing">
+        <label for="testing">Usability Testing</label>
+        <div class="content">
+          <p>Conduct tests and improve designs based on user feedback.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

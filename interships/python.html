@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Full Stack Internship</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    nav {
+      background: #1e1e1e;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px;
+      gap: 40px;
+    }
+    .main-content {
+      flex: 2;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .main-content img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .main-content h2 {
+      margin-top: 20px;
+      font-size: 2rem;
+      color: #333;
+    }
+    .main-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    .key-points ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    .sidebar {
+      flex: 1;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .sidebar h3 {
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .accordion input[type="checkbox"] {
+      display: none;
+    }
+    .accordion label {
+      display: block;
+      background: #eee;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .accordion .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: #f9f9f9;
+      padding: 0 10px;
+    }
+    .accordion input:checked + label + .content {
+      max-height: 300px;
+      padding: 10px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .container {
+      flex-direction: column;
+      gap: 20px;
+      }
+      .main-content, .sidebar {
+      flex: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+      font-size: 1rem;
+      padding: 10px 20px;
+      }
+      .main-content h2 {
+      font-size: 1.5rem;
+      }
+      .main-content p, .sidebar h3 {
+      font-size: 0.9rem;
+      }
+      .accordion label {
+      font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+      text-align: center;
+      }
+      .container {
+      padding: 15px;
+      }
+      .main-content img {
+      max-height: 200px;
+      }
+      .main-content h2 {
+      font-size: 1.2rem;
+      }
+      .main-content p, .sidebar h3 {
+      font-size: 0.8rem;
+      }
+      .accordion label {
+      font-size: 0.8rem;
+      padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    
+    <h1>Python Full Stack Internship</h1>
+    <div style="display: flex; gap: 15px;">
+      <a href="" style="padding: 10px 20px; background-color: #612EED; color: #fff; text-decoration: none; border-radius: 5px; font-size: 1rem; border: 2px solid #612EED; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#fff'; this.style.color='#612EED';" onmouseout="this.style.backgroundColor='#612EED'; this.style.color='#fff';">Enroll Now</a>
+      <a href="" style="padding: 10px 20px; background-color: #fff; color: #612EED; text-decoration: none; border-radius: 5px; font-size: 1rem; border: 2px solid #612EED; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#612EED'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#612EED';">Explore Courses</a>
+  </div>
+  </nav>
+
+  <div class="container">
+    <!-- Internship Details -->
+    <div class="main-content">
+      <img src="/images/imgcs.png" alt="Python Full Stack Internship">
+      <h2>Python Full Stack Internship</h2>
+      <p><strong>Stipend:</strong> ₹12,000/month</p>
+      <p><strong>Duration:</strong> 4 Months</p>
+      <p><strong>Start Date:</strong> August 5, 2025</p>
+      <p><strong>Location:</strong> Remote</p>
+      <p><strong>Application Deadline:</strong> July 25, 2025</p>
+
+      <h3>Description:</h3>
+      <p>
+        Get hands-on experience in full-stack development using Python. Work with frameworks like Django and React, and collaborate on real-world applications as part of a dynamic tech team.
+      </p>
+
+      <div class="key-points">
+        <h3>Key Responsibilities:</h3>
+        <ul>
+          <li>Develop APIs using Django or Flask</li>
+          <li>Build frontend apps using React or HTML/CSS/JS</li>
+          <li>Work with relational databases like PostgreSQL</li>
+          <li>Participate in code reviews and sprint planning</li>
+        </ul>
+
+        <h3>Perks:</h3>
+        <ul>
+          <li>Certificate of Internship</li>
+          <li>Letter of Recommendation</li>
+          <li>Mentorship and Career Guidance</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Sidebar: Skills Overview -->
+    <div class="sidebar">
+      <h3>Internship Skills</h3>
+      <div class="accordion">
+        <input type="checkbox" id="python">
+        <label for="python">Python</label>
+        <div class="content">
+          <p>Master Python fundamentals, OOPs, and scripting for backend tasks.</p>
+        </div>
+
+        <input type="checkbox" id="django">
+        <label for="django">Django</label>
+        <div class="content">
+          <p>Use Django to build scalable and secure web applications with built-in admin and ORM features.</p>
+        </div>
+
+        <input type="checkbox" id="react">
+        <label for="react">React</label>
+        <div class="content">
+          <p>Develop dynamic frontends with React using components and hooks.</p>
+        </div>
+
+        <input type="checkbox" id="db">
+        <label for="db">Database (PostgreSQL/MySQL)</label>
+        <div class="content">
+          <p>Design schemas and write efficient queries for storing and retrieving data securely.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

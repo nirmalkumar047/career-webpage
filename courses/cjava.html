@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Core Java Course</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    nav {
+      background: #1e1e1e;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px;
+      gap: 40px;
+    }
+    .main-content {
+      flex: 2;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .main-content img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .main-content h2 {
+      margin-top: 20px;
+      font-size: 2rem;
+      color: #333;
+    }
+    .main-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    .key-points ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    .sidebar {
+      flex: 1;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .sidebar h3 {
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    /* Accordion */
+    .accordion {
+      margin: 10px 0;
+    }
+    .accordion input[type="checkbox"] {
+      display: none;
+    }
+    .accordion label {
+      display: block;
+      background: #eee;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .accordion .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: #f9f9f9;
+      padding: 0 10px;
+    }
+    .accordion input:checked + label + .content {
+      max-height: 300px;
+      padding: 10px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .container {
+      flex-direction: column;
+      gap: 20px;
+      }
+      .main-content, .sidebar {
+      flex: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+      font-size: 1rem;
+      padding: 10px 20px;
+      }
+      nav h1 {
+      font-size: 1.5rem;
+      }
+      .main-content h2 {
+      font-size: 1.5rem;
+      }
+      .main-content p {
+      font-size: 0.9rem;
+      }
+      .sidebar h3 {
+      font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+      text-align: center;
+      }
+      nav div {
+      flex-direction: column;
+      gap: 10px;
+      }
+      .main-content img {
+      max-height: 200px;
+      }
+      .accordion label {
+      font-size: 0.9rem;
+      }
+      .accordion .content {
+      font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>Core Java Course</h1>
+
+    <div style="display: flex; gap: 15px;">
+      <a href="" style="padding: 10px 20px; background-color: #612EED; color: #fff; text-decoration: none; border-radius: 5px; font-size: 1rem; border: 2px solid #612EED; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#fff'; this.style.color='#612EED';" onmouseout="this.style.backgroundColor='#612EED'; this.style.color='#fff';">Enroll Now</a>
+      <a href="" style="padding: 10px 20px; background-color: #fff; color: #612EED; text-decoration: none; border-radius: 5px; font-size: 1rem; border: 2px solid #612EED; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#612EED'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#612EED';">Explore Courses</a>
+  </div>
+  </nav>
+
+  <div class="container">
+    <!-- Main Course Details -->
+    <div class="main-content">
+      <img src="/images/imgks.png" alt="Core Java Course">
+      <h2>Core Java Programming</h2>
+      <p><strong>Languages & Tools:</strong> Java SE, Eclipse/IntelliJ, JDK, JRE</p>
+      <p><strong>Duration:</strong> 8 Weeks</p>
+      <p><strong>Course Starts From:</strong> August 15, 2025</p>
+
+      <h3>Description:</h3>
+      <p>
+        Learn the foundations of Java programming and develop the skills needed for building robust, scalable applications. This course covers all essential Java concepts to prepare you for advanced development.
+      </p>
+
+      <div class="key-points">
+        <h3>Key Highlights:</h3>
+        <ul>
+          <li>Java syntax and fundamentals</li>
+          <li>Object-Oriented Programming (OOP)</li>
+          <li>Exception handling and file I/O</li>
+          <li>Collections and multithreading</li>
+          <li>Practical mini-projects using Core Java</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Sidebar: Course Overview Accordion -->
+    <div class="sidebar">
+      <h3>Course Overview</h3>
+
+      <div class="accordion">
+        <input type="checkbox" id="basics">
+        <label for="basics">Java Basics</label>
+        <div class="content">
+          <p>Syntax, variables, data types, operators, and control statements.</p>
+        </div>
+
+        <input type="checkbox" id="oops">
+        <label for="oops">Object-Oriented Programming</label>
+        <div class="content">
+          <p>Concepts like classes, objects, inheritance, polymorphism, encapsulation, and abstraction.</p>
+        </div>
+
+        <input type="checkbox" id="exceptions">
+        <label for="exceptions">Exception Handling</label>
+        <div class="content">
+          <p>Try-catch blocks, finally, throws, and custom exceptions for robust applications.</p>
+        </div>
+
+        <input type="checkbox" id="collections">
+        <label for="collections">Collections Framework</label>
+        <div class="content">
+          <p>Lists, Sets, Maps, and advanced utilities like ArrayList, HashMap, etc.</p>
+        </div>
+
+        <input type="checkbox" id="threads">
+        <label for="threads">Multithreading</label>
+        <div class="content">
+          <p>Thread creation, synchronization, and inter-thread communication for concurrent programming.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

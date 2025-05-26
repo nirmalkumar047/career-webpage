@@ -1,0 +1,381 @@
+/* FILE: css/style.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .auth-page {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background: #f5f5f5;
+  }
+  
+  .form-container {
+    background: white;
+margin-left: auto;
+margin-right: auto;
+    padding: 2em;
+    /* border-radius: 8px; */
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+  }
+  
+  .form-container form input {
+    display: block;
+    margin-bottom: 1em;
+    padding: 0.7em;
+    width: 350px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    align-items: center;
+    background:#fff;
+    color: #000;
+    padding: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    padding: 0;
+  }
+
+  .navbar ul li a:hover {
+    color: #007BFF;
+    text-decoration: underline;
+  }
+  
+  .navbar ul li a {
+    color: black;
+    text-decoration: none;
+   
+    }
+
+  
+  
+  .hero {
+    padding: 2em;
+    text-align: center;
+    background: #e0f7fa;
+  }
+  
+  .cards {
+    padding: 3em;
+    padding-left: 5em;
+    
+  }
+  
+  .card-grid {
+    display: flex;
+    gap: 5em;
+    margin-top: 2em;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 1em;
+    
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 350px;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .card a {
+    display: inline-block;
+    margin-top: 0.5em;
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .course-detail {
+    display: flex;
+    gap: 2em;
+    padding: 2em;
+    background: #f9f9f9;
+  }
+  
+  .course-detail img {
+    width: 300px;
+    border-radius: 10px;
+  }
+  
+  .course-detail button {
+    padding: 0.7em 2em;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .course-detail button:hover {
+    background: #0056b3;
+  }
+
+  .contact{
+    height: 70vh;
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cl{
+    
+    width: 50%;
+    display: flex;
+    line-height: 2rem;
+    border: 5px solid transparent;
+}
+.matt{
+    background-color: var(--second-bg-color);
+    padding: 20px 25px 10px 10px;
+    border-radius: 10px;
+}
+.details{
+    color: #00abf0;
+}
+.connect{
+    padding: 20px 25px 10px 10px;
+    border-radius: 10px;
+    background: white;
+    color: #112e42;
+    
+}
+input{
+    background-color: #fff;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+}
+#mess{
+    
+    position: relative;
+    
+    justify-content:center;
+    align-self: center;
+    border-radius: 8px;
+}
+#sen:hover{
+    background-color: transparent;
+    color: #612EED;
+    border: 5px solid #612EED;
+}
+form button{
+    background-color: #612EED;
+    color: #fff;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+}
+.connect h2{
+    color: #081b29;
+}
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .hero {
+      padding: 1.5em;
+    }
+
+    .cards {
+      padding: 2em;
+    }
+
+    .card-grid {
+      gap: 3em;
+    }
+
+    .course-detail {
+      gap: 1em;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .auth-page {
+      flex-direction: column;
+      justify-content: center;
+      padding: 1em;
+    }
+
+    .hero {
+      padding: 1em;
+      text-align: center;
+    }
+
+    .cards {
+      padding: 1em;
+    }
+
+    .card-grid {
+      flex-direction: column;
+      gap: 1.5em;
+    }
+
+    .card {
+      width: 100%;
+    }
+
+    .form-container form input {
+      width: 100%;
+    }
+
+    .navbar {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .course-detail {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .course-detail img {
+      width: 100%;
+    }
+
+    .cl {
+      flex-direction: column;
+      width: 90%;
+    }
+
+    .contact {
+      height: auto;
+      padding: 2em;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .navbar ul {
+      flex-direction: column;
+      gap: 0.5em;
+    }
+
+    .card {
+      width: 100%;
+    }
+
+    .course-detail button {
+      width: 100%;
+    }
+
+    .connect, .matt {
+      padding: 10px;
+    }
+
+    .hero {
+      font-size: 0.9em;
+    }
+
+    .cards {
+      padding: 0.5em;
+    }
+
+    .card-grid {
+      gap: 1em;
+    }
+  }
+  @media (max-width: 768px) {
+    .auth-page {
+      flex-direction: column;
+      justify-content: center;
+      padding: 1em;
+    }
+
+    .hero {
+      padding: 1em;
+      text-align: center;
+    }
+
+    .cards {
+      padding: 1em;
+    }
+
+    .card-grid {
+      flex-direction: column;
+      gap: 1.5em;
+    }
+
+    .card {
+      width: 100%;
+    }
+
+    .form-container form input {
+      width: 100%;
+    }
+
+    .navbar {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .card-grid {
+      flex-direction: column;
+      gap: 2em;
+    }
+
+    .course-detail {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .course-detail img {
+      width: 100%;
+    }
+
+    .cl {
+      flex-direction: column;
+      width: 90%;
+    }
+
+    .contact {
+      height: auto;
+      padding: 2em;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .navbar ul {
+      flex-direction: column;
+      gap: 0.5em;
+    }
+
+    .card {
+      width: 100%;
+    }
+
+    .course-detail button {
+      width: 100%;
+    }
+
+    .connect, .matt {
+      padding: 10px;
+    }
+  }
